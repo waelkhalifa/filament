@@ -36,4 +36,20 @@ class MarkdownEditor extends Field implements Contracts\CanBeLengthConstrained, 
         'table',
         'undo',
     ];
+
+    public function simple(): static
+    {
+        $this->toolbarButtons([
+            'heading',
+            'bold',
+            'italic',
+            'link',
+            'orderedList',
+            'bulletList',
+            'undo',
+            'redo',
+        ]);
+
+        return $this;
+    }
 }
